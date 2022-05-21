@@ -19,8 +19,6 @@
     let theBadges = document.querySelectorAll('img');
 
     function logMyId() {
-        debugger; // pauses code execution at this line
-
         // log the element's ID to the console window
         console.log(this.id);
         // 'this' refers to the element that you're interacting with at the moment
@@ -33,4 +31,20 @@
     // for each badge in our collection, add an event handler
     // arrow functions are just shorthand function declarations
     theBadges.forEach(badge => badge.addEventListener('click', logMyId));
+
+
+
+    
+    // Logging SVGs Icons
+
+    let theIcons = document.querySelectorAll('svg');
+
+    function logMySVG() {
+        console.log(this.id);
+    }
+
+    theIcons.forEach(icon => icon.addEventListener('click',logMySVG));
+
+
+
 })();
