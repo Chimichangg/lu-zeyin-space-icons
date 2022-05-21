@@ -1,0 +1,25 @@
+/* this is a quick reset - remove default browser styles */
+* {
+    border: none;
+    padding: 0;
+    margin: 0;
+
+    box-sizing: border-box;
+}
+
+body { font-size: 16px; }
+
+.hidden { display: none; }
+
+.svg-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-gap: 20px;
+}
+
+.container img { width: 100%; }
+
+#newBadge #red:hover {
+    fill: yellow !important;
+}
