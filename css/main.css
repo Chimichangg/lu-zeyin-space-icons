@@ -7,15 +7,38 @@
     box-sizing: border-box;
 }
 
-body { font-size: 16px; }
+body { 
+    margin: 0 20em;
+	padding: 0;
+	color: white;
+	font-family: sans-serif;
+	font-size: 16px;
+    background-color: #1d2738;
+}
+
+/* reset end */
 
 .hidden { display: none; }
 
-.svg-grid {
+.main-heading {
+    display: block;
+    font-size: 5em;
+    font-family: 'Khand', sans-serif;
+    text-align: center;
+    margin-top: 0.5em;
+}
+
+.svg-grid-three {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto;
-    grid-gap: 20px;
+    grid-column: 2 / span 2;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: space-evenly;
+    row-gap: 8em;
+    column-gap: 5em;
+}
+
+.container {
+    padding: 2.5em;
 }
 
 .container img { width: 100%; }
