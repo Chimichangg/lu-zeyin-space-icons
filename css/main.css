@@ -11,7 +11,7 @@ body {
     margin: 0 10em;
 	padding: 0;
 	color: white;
-	font-family: sans-serif;
+	font-family: 'Khand', sans-serif;
 	font-size: 16px;
     background-color: #1d2738;
 }
@@ -26,8 +26,8 @@ body {
     font-family: 'Khand', sans-serif;
     text-align: center;
     margin-top: 0.5em;
-    margin-bottom: 0.3em;
-    color: #9cabc4;
+    margin-bottom: 0.5em;
+    color: #b1cbf7;
     text-shadow: #00000034 20px 20px 20px;
 
 }
@@ -42,12 +42,14 @@ body {
     grid-column: 2 / span 2;
     grid-template-columns: repeat(3, 1fr);
     justify-content: space-evenly;
-    row-gap: 5em;
+    row-gap: 3.5em;
     column-gap: 5em;
 }
 
 .container {
     padding: 40px;
+    text-align: center;
+
 }
 
 .container img { width: 100%; }
@@ -57,67 +59,277 @@ body {
     transition: 0.7s;
 }
 
-#newBadge #red:hover {
-    fill: yellow !important;
+.icon-name {
+    font-family: inherit;
+    font-weight: 300;
+    display: block;
+    opacity: 0%;
+    margin-bottom: 0.8em;
+    color: #deeaff9a;
 }
+
+.container:hover .icon-name{
+    opacity: 100%;
+    transition: 1s;
+}
+
+
+
+
 
 #newBadge #red:hover {
     fill: yellow !important;
 }
 
-#daft-thomas #bg-circle:hover{
+#newBadge #red:hover {
+    fill: yellow !important;
+}
+
+
+
+
+#daft-thomas:hover #bg-circle {
     fill: #54647a;
     transition: 0.2s;
 }
 
-#daft-guy #bg-circle:hover {
-    fill: #a37c25;
+#daft-thomas:hover #shadow {
+    opacity: 0.3;
+    transition: 0.9s;
+}
+
+#daft-thomas:hover #goggle {
+    transform-origin: center;
+    transform: scale(1.2);
+    transition: 0.2s;
+    transition-delay: 0.5s;
+}
+
+
+
+
+
+#daft-guy:hover #bg-circle {
+    fill: #c4993b;
     transition: 0.2s;
 }
 
-#spaceman #bg-circle:hover {
-    fill: #481d7d;
+#daft-guy:hover #shadow {
+    opacity: 0.3;
+    transition: 0.9s;
+}
+
+#daft-guy:hover {
+    position: relative;
+    animation-name: float;
+    animation-duration: 5s;
+    animation-direction: reverse;  
+    animation-iteration-count: infinite;
+}
+@keyframes float {
+    0%   {left:1px; top:4px;}
+    25%  { left:5px; top:9px;}
+    50%  {left:5px; top:2px;}
+    75%  {left:7px; top:11;}
+    100% {left:1px; top:4px;}
+}
+
+
+
+
+
+
+#spaceman:hover #bg-circle {
+    fill: #cc7070b3;
     transition: 0.2s;
 }
 
-#moon #bg-circle:hover {
+#spaceman:hover #shadow {
+    opacity: 0.3;
+    transition: 0.9s;
+}
+
+#spaceman:hover #light-reflect {
+    opacity: 0.4;
+    transition: 1.2s;
+}
+
+
+
+
+
+
+#moon:hover #bg-circle {
     fill: #119c7c;
     transition: 0.2s;
 }
+#moon:hover #stars {
+    animation-name: blink;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+}
 
-#jet #bg-circle:hover {
+@keyframes blink {
+    0% {opacity: 0;}
+    50% {opacity: 0.8;}
+    100% {opacity: 0;}
+}
+
+#moon:hover #shadow {
+    opacity: 0.2;
+    transition: 0.9s;
+}
+
+
+
+
+
+#jet:hover #bg-circle{
     fill: #2c3f98;
     transition: 0.2s;
 }
 
-#purple-planet #bg-circle:hover {
-    fill: #c38dde;
-    opacity: 30%;
-    transition: 0.2s;
+#jet:hover #shadow {
+    opacity: 0.2;
+    transition: 0.9s;
+}
+#jet:hover {
+    position: relative;
+    animation-name: float;
+    animation-duration: 2s;
+    animation-direction: reverse;  
+    animation-iteration-count: infinite;
+}
+@keyframes float {
+    0%   {left:1px; top:4px;}
+    25%  {left:5px; top:9px;}
+    50%  {left:5px; top:2px;}
+    75%  {left:7px; top:11;}
+    100% {left:1px; top:4px;}
 }
 
-#orange-planet #bg-circle:hover {
+
+
+
+
+#purple-planet:hover #bg-circle{
+    fill: #b178ce;
+    opacity: 80%;
+    transition: 0.5s;
+}
+
+#purple-planet:hover #shadow {
+    opacity: 0.2;
+    transition: 1.5s;
+}
+
+#purple-planet #halo {
+    transform: scale(0.5);
+    transform-origin: center;
+}
+
+#purple-planet:hover #halo {
+    transform: scale(1.35);
+    transform-origin: center;
+    transition: 3s;
+}
+
+
+
+#orange-planet:hover #bg-circle{
     fill: #d98218;
     opacity: 70%;
     transition: 0.2s;
 }
 
+#orange-planet:hover #shadow {
+    opacity: 0.2;
+    transition: 0.9s;
+}
 
-#earth #bg-circle:hover {
+#orange-planet:hover #lighting  {
+    opacity: 0.4;
+    transition: 0.9s;
+}
+
+#orange-planet:hover #orbit {
+    fill: rgb(202, 230, 61);
+    transition: 2s;
+    transition-delay: 0.5s;
+}
+
+
+
+#earth #bg-circle:hover #bg-circle{
     fill: #58d06e;
     opacity: 70%;
     transition: 0.2s;
 }
 
-#rocket #bg-circle:hover {
+#earth:hover #shadow {
+    opacity: 0.2;
+    transition: 0.9s;
+}
+
+#earth:hover #lighting  {
+    opacity: 0.4;
+    transition: 0.9s;
+}
+
+
+
+
+
+
+
+
+#rocket:hover #bg-circle{
     fill: #dc6036;
     opacity: 70%;
     transition: 0.2s;
 }
 
 
-#shooting-star #bg-circle:hover {
-    fill: #e8e088;
-    opacity: 70%;
+#rocket:hover #fire {
+    animation-name: fire;
+    animation-duration: 0.8s;
+    animation-iteration-count: infinite;
+    transform-origin: center;
+}
+
+@keyframes fire {
+    0% {transform: scale(1,1);}
+    50% {transform: scale(1.2,1.1);}
+
+}
+
+#rocket:hover #shadow {
+    opacity: 0.2;
+}
+
+
+
+
+
+
+#shooting-star:hover #bg-circle{
+    fill: #c7bb39;
+    opacity: 90%;
     transition: 0.2s;
+}
+
+#shooting-star:hover #shadow {
+    opacity: 0.2;
+    transition: 0.9s;
+}
+
+#shooting-star:hover #shooting-star-inside {
+    fill: red;
+    transition: 2s;
+}
+
+#shooting-star:hover #shooting-star-outside {
+    fill: rgb(68, 27, 203);
+    transition: 2s;
+    transition-delay: 1s;
 }
